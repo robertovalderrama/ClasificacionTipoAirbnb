@@ -1,7 +1,7 @@
 fastapi
 uvicorn
 python-multipart
-scikit-learn
+scikit-learn==1.6.1
 pandas
 numpy
 gunicorn
