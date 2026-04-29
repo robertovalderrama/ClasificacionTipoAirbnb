@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Predicción de Tipo de Inmueble</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/styles.css">
+
+</head>
+
+<body>
+<div class="container">
+
+<div class="header">
+<h1>Predicción de Tipo de Inmueble</h1>
+<p class="subtitle">Obtén el tipo de alojamiento óptimo según las características del listado</p>
+</div>
+
+<div class="grid">
+
+<div class="field">
+<label>City</label>
+<input list="cities" id="city" placeholder="Escribe o selecciona ciudad">
+<datalist id="cities">
+<option value="New York City">
+<option value="Los Angeles">
+<option value="Broward County">
+<option value="Austin">
+<option value="Clark County">
+<option value="San Diego">
+<option value="Chicago">
+<option value="San Francisco">
+<option value="Seattle">
+<option value="Denver">
+<option value="Boston">
+</datalist>
+</div>
+
+<div class="field">
+<label>Neighbourhood Group</label>
+<input list="groups" id="neighbourhood_group" placeholder="Selecciona o escribe">
+<datalist id="groups">
+<option value="City of Los Angeles">
+<option value="Manhattan">
+<option value="Brooklyn">
+<option value="Queens">
+<option value="Bronx">
+<option value="Staten Island">
+<option value="Downtown">
+<option value="Capitol Hill">
+</datalist>
+</div>
+
+<div class="field">
+<label>Neighbourhood</label>
+<input list="neighbourhoods" id="neighbourhood" placeholder="Selecciona o escribe">
+<datalist id="neighbourhoods">
+<option value="Hollywood">
+<option value="Harlem">
+<option value="Midtown">
+<option value="Williamsburg">
+<option value="Downtown">
+<option value="Venice">
+<option value="Santa Monica">
+<option value="Beverly Hills">
+</datalist>
+</div>
+
+<div class="field"><label>Latitude</label><input id="latitude"></div>
+<div class="field"><label>Longitude</label><input id="longitude"></div>
+<div class="field"><label>Precio por noche (USD)</label><input type="number" id="price" placeholder="Ej: 120 USD"></div>
+<div class="field"><label>Minimum Nights</label><input id="minimum_nights"></div>
+<div class="field"><label>Number of Reviews</label><input id="number_of_reviews"></div>
+<div class="field"><label>Reviews per Month</label><input id="reviews_per_month"></div>
+<div class="field"><label>Host Listings Count</label><input id="calculated_host_listings_count"></div>
+<div class="field"><label>Availability 365</label><input id="availability_365"></div>
+<div class="field"><label>Reviews LTM</label><input id="number_of_reviews_ltm"></div>
+
+</div>
+
+<button onclick="predict()">Predecir Tipo de Inmueble</button>
+
+<div class="result">
+<p>Tipo recomendado:</p>
+<h2 id="output">---</h2>
+</div>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
